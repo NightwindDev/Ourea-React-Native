@@ -11,7 +11,6 @@ import {
   ActionSheetIOS,
 } from "react-native";
 
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { SearchBar } from "react-native-elements";
 import { WebView } from "react-native-webview";
@@ -537,38 +536,6 @@ function HomeScreen() {
   );
 }
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
-
-// ----------------------------------------- //
-
-const Tab = createBottomTabNavigator();
-
 export default function App() {
-  //console.log(colorScheme)
-
-  return (
-    // <NavigationContainer>
-    //   <Tab.Navigator
-    //     screenOptions={({ route }) => ({
-    //       headerShown: false,
-    //       tabBarStyle: {
-    //         backgroundColor:
-    //           colorScheme == "light" ? "#ffffff" : "rgba(34,36,40,1)",
-    //         position: "absolute",
-    //       },
-    //     })}
-    //   >
-    //     <Tab.Screen name="Home" component={HomeScreen} />
-    //     <Tab.Screen name="Repos" component={SettingsScreen} />
-    //     <Tab.Screen name="Search" component={SettingsScreen} />
-    //   </Tab.Navigator>
-    // </NavigationContainer>
-    <HomeScreen />
-  );
+  return <HomeScreen />;
 }
